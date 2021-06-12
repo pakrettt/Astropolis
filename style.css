@@ -1,0 +1,94 @@
+/*
+stylesheet by Pakrett
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Roboto&family=ZCOOL+KuaiLe&display=swap');
+
+/* --- VARIABLES --- */
+:root{
+	--color-pink: #de2662;
+	--color-yellow: #fee690;
+	--color-purple: #5a4468;
+	--color-dark: #202938;
+	--color-light: #f8eff0;
+}
+
+/* --- GLOBAL --- */
+
+body{
+	background-color: var(--color-purple);
+	color: var(--color-dark);
+	font-family: 'Roboto', sans-serif;
+}
+a, a:active, a:visited{
+	color: var(--color-purple);
+}
+a:hover{
+	color: var(--color-pink);
+}
+
+h1{
+	font-family: 'ZCOOL KuaiLe', cursive;
+}
+
+h2, h3{
+	font-family: 'Bowlby One SC', cursive;
+	color: var(--color-pink);
+}
+.cts{
+	background-color: transparent;
+	border: solid var(--color-pink);
+	color: var(--color-pink);
+	border-radius: 50px;
+}
+.cts:hover{
+	background-color: var(--color-pink);
+	border: solid var(--color-pink);
+	color: var(--color-light);
+}
+
+
+/* --- HEADER --- */
+
+header nav{
+	background-color: var(--color-dark);
+	color: var(--color-light);
+}
+
+.navbar-header a, .navbar-header a:active, .navbar-header a:visited{
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 1.5rem;
+	color: var(--color-light);
+}
+
+.navbar-header a:hover{
+	color: var(--color-yellow);
+	font-size: 1.7rem;
+}
+
+header .nav-link{
+	padding-right: 2rem;
+}
+
+
+/* --- FOOTER --- */
+
+footer{
+	background-color: var(--color-dark);
+	color: var(--color-light);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.navbar-footer a, .navbar-footer a:active, .navbar-footer a:visited{
+	color: var(--color-light);
+}
+
+.navbar-footer a:hover{
+	color: var(--color-yellow);
+}
+
+.form-newsletter{
+	max-width: 300px;
+}
