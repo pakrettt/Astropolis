@@ -4,20 +4,22 @@ stylesheet by Pakrett
 
 @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Roboto&family=ZCOOL+KuaiLe&display=swap');
 
+
 /* --- VARIABLES --- */
 :root{
-	--color-pink: #de2662;
+	--color-pink: #ff00ff;
 	--color-yellow: #fee690;
-	--color-purple: #5a4468;
-	--color-dark: #202938;
-	--color-light: #f8eff0;
+	--color-purple: #a300e0;
+	--color-purple-light:#c800ef;
+	--color-dark: #000000;
+	--color-light: #ffffff;
 }
 
 /* --- GLOBAL --- */
 
 body{
-	background-color: var(--color-purple);
-	color: var(--color-dark);
+	background-color: var(--color-pink);
+	color: var(--color-light);
 	font-family: 'Roboto', sans-serif;
 }
 a, a:active, a:visited{
@@ -33,7 +35,9 @@ h1{
 
 h2, h3{
 	font-family: 'Bowlby One SC', cursive;
-	color: var(--color-pink);
+	color: white;
+	box-shadow: -1rem 0.2rem black;
+	display:  inline-block;
 }
 .cts{
 	background-color: transparent;
@@ -47,6 +51,31 @@ h2, h3{
 	color: var(--color-light);
 }
 
+@keyframes rotate{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+
+#background{
+	position: fixed;
+	overflow: hidden;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+#background::before {
+	content: "";
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	top: -100%;
+	left: -50%;
+	background: url(img/deco-light-1.png) 0 0 no-repeat;
+	opacity: 0.4;
+	background-position: center;
+	transform: rotate(0deg);
+	animation: rotate 60s linear infinite;
+}
 
 /* --- HEADER --- */
 
@@ -62,21 +91,28 @@ header nav{
 }
 
 .navbar-header a:hover{
-	color: var(--color-yellow);
-	font-size: 1.7rem;
+	color: var(--color-pink);
+	background-color: white;
 }
 
 header .nav-link{
 	padding-right: 2rem;
 }
 
+/* --- MAIN --- */
+
+#home-page{
+	padding-top: 100px;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
 
 /* --- FOOTER --- */
 
-footer{
+#nav-footer{
 	background-color: var(--color-dark);
 	color: var(--color-light);
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -86,9 +122,21 @@ footer{
 }
 
 .navbar-footer a:hover{
-	color: var(--color-yellow);
+	color: var(--color-pink);
 }
 
 .form-newsletter{
 	max-width: 300px;
+}
+
+@keyframes deco-bottom-anim{
+	from{background: url(img/deco-bottom-1.png) bottom no-repeat;background-size: contain;}
+	to{background: url(img/deco-bottom-2.png) bottom no-repeat;background-size: contain;}
+}
+.deco-bottom{
+	background: url(img/deco-bottom-1.png) bottom no-repeat;
+	animation: deco-bottom-anim 0.5s infinite alternate steps(2, jump-none);
+	background-size: contain;
+	min-height: 256px;
+	width: 100%;
 }
