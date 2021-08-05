@@ -86,7 +86,7 @@ header nav{
 
 .navbar-header a, .navbar-header a:active, .navbar-header a:visited{
 	font-family: 'Bowlby One SC', cursive;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	color: var(--color-light);
 }
 
@@ -106,6 +106,10 @@ header .nav-link{
     display: flex;
     height: 100vh;
     flex-direction: column;
+}
+
+#home-page section{
+	background-color: var(--color-purple-light);
 }
 
 /* --- FOOTER --- */
