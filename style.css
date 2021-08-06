@@ -47,7 +47,7 @@ h2, h3{
 	font-size: 1.5rem;
 	background-color: #000000;
 	color: white;
-	width: 300px;
+	width: 250px;
 	padding: 1rem;
 	border:none;
 	border-radius: 0;
@@ -73,6 +73,10 @@ h2, h3{
 .form-control{
 	border: none;
 	border-radius: 0px;
+}
+.dropdown-menu{
+	background-color: black;
+	border-radius: 0;
 }
 
 @keyframes rotate{
@@ -108,13 +112,16 @@ header nav{
 	color: var(--color-light);
 }
 
-.navbar-header a, .navbar-header a:active, .navbar-header a:visited{
+.navbar-header a, .navbar-header a:visited{
 	font-family: 'Bowlby One SC', cursive;
 	font-size: 1.3rem;
 	color: var(--color-light);
 }
 
-.navbar-header a:hover{
+.navbar-header .active a{
+	color: var(--color-pink);
+}
+.navbar-header a:not(.navbar-brand):hover{
 	color: var(--color-pink);
 	background-color: white;
 }
