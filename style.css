@@ -33,22 +33,46 @@ h1{
 	font-family: 'ZCOOL KuaiLe', cursive;
 }
 
+h2{
+	box-shadow: -1rem 0.2rem black;
+}
+
 h2, h3{
 	font-family: 'Bowlby One SC', cursive;
 	color: white;
-	box-shadow: -1rem 0.2rem black;
 	display:  inline-block;
 }
-.cts{
-	background-color: transparent;
-	border: solid var(--color-pink);
-	color: var(--color-pink);
-	border-radius: 50px;
+.btn-big{
+	font-family: 'Bowlby One SC', cursive;
+	font-size: 1.5rem;
+	background-color: #000000;
+	color: white;
+	width: 300px;
+	padding: 1rem;
+	border:none;
+	border-radius: 0;
 }
-.cts:hover{
-	background-color: var(--color-pink);
-	border: solid var(--color-pink);
-	color: var(--color-light);
+.btn-big:hover{
+	background-color: white;
+	color: var(--color-pink);
+	box-shadow: inset 1rem -0.2rem black;
+}
+.btn-cta{
+	background-color: transparent;
+	border: solid black;
+	color: white;
+	border-radius: 0px;
+	font-size: 1.2rem;
+	transition: box-shadow linear 0.2s;
+	box-shadow: inset 0 0 black;
+}
+.btn-cta:hover{
+	color: white;
+	box-shadow: inset 15rem 0 black;
+}
+.form-control{
+	border: none;
+	border-radius: 0px;
 }
 
 @keyframes rotate{
@@ -104,33 +128,45 @@ header .nav-link{
 #home-page{
 	padding-top: 100px;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
 }
 
 #home-page section{
-	background-color: var(--color-purple-light);
+
+}
+
+.form-newsletter{
+	max-width: 500px;
 }
 
 /* --- FOOTER --- */
 
 #nav-footer{
 	background-color: var(--color-dark);
-	color: var(--color-light);
-    bottom: 0;
+    padding: 1rem;
     width: 100%;
 }
 
+.navbar-footer li{
+	display: flex;
+	align-items: center;
+}
+
+@media (min-width: 768px){
+	.navbar-footer li:not(:first-child)::before{
+		content: "|";
+		padding: 0 1rem;
+	}	
+}
+
+
 .navbar-footer a, .navbar-footer a:active, .navbar-footer a:visited{
-	color: var(--color-light);
+	color: rgba(255, 255, 255, 0.7);
 }
 
 .navbar-footer a:hover{
 	color: var(--color-pink);
-}
-
-.form-newsletter{
-	max-width: 300px;
 }
 
 @keyframes deco-bottom-anim{
@@ -141,6 +177,6 @@ header .nav-link{
 	background: url(img/deco-bottom-1.png) bottom no-repeat;
 	animation: deco-bottom-anim 0.5s infinite alternate steps(2, jump-none);
 	background-size: contain;
-	min-height: 256px;
+	min-height: 45vh;
 	width: 100%;
 }
