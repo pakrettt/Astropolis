@@ -2,17 +2,17 @@
 stylesheet by Pakrett
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Roboto&family=ZCOOL+KuaiLe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Roboto:wght@100;300;500&display=swap');
 
 
 /* --- VARIABLES --- */
 :root{
 	--color-pink: #ff00ff;
-	--color-yellow: #fee690;
-	--color-purple: #a300e0;
-	--color-purple-light:#c800ef;
+	--color-purple: #540072;
 	--color-dark: #000000;
 	--color-light: #ffffff;
+	--font-title: 'Bowlby One SC', cursive;
+	--font-text: 'Roboto', sans-serif;
 }
 
 /* --- GLOBAL --- */
@@ -20,30 +20,33 @@ stylesheet by Pakrett
 body{
 	background-color: var(--color-pink);
 	color: var(--color-light);
-	font-family: 'Roboto', sans-serif;
+	font-family: var(--font-text);
 }
 a, a:active, a:visited{
-	color: var(--color-purple);
+	color: var(--color-dark);
+	text-decoration: none;
 }
 a:hover{
-	color: var(--color-pink);
+	color: var(--color-purple);
 }
 
 h1{
-	font-family: 'ZCOOL KuaiLe', cursive;
+	font-family: var(--font-title);
 }
 
 h2{
+	font-family: var(--font-title);
 	box-shadow: -1rem 0.2rem black;
-}
-
-h2, h3{
-	font-family: 'Bowlby One SC', cursive;
+	margin-bottom: 1.5rem;
 	color: white;
 	display:  inline-block;
 }
+h3{
+	text-transform: uppercase;
+	font-weight: 300;
+}
 .btn-big{
-	font-family: 'Bowlby One SC', cursive;
+	font-family: var(--font-title);
 	font-size: 1.5rem;
 	background-color: #000000;
 	color: white;
@@ -113,7 +116,7 @@ header nav{
 }
 
 .navbar-header a, .navbar-header a:visited{
-	font-family: 'Bowlby One SC', cursive;
+	font-family: var(--font-title);
 	font-size: 1.3rem;
 	color: var(--color-light);
 }
@@ -132,15 +135,16 @@ header .nav-link{
 
 /* --- MAIN --- */
 
-#home-page{
+main{
 	padding-top: 100px;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
 
-#home-page section{
-
+main .container{
+	max-width: 750px;
+	margin: auto;
 }
 
 .form-newsletter{
@@ -187,3 +191,6 @@ header .nav-link{
 	min-height: 45vh;
 	width: 100%;
 }
+
+/* --- ANIMATIONS --- */
+
