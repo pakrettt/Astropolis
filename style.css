@@ -115,7 +115,7 @@ header nav{
 	color: var(--color-light);
 }
 
-.navbar-header a, .navbar-header a:visited{
+.navbar-header a, .navbar-header a:visited, .navbar-header a:active{
 	font-family: var(--font-title);
 	font-size: 1.3rem;
 	color: var(--color-light);
@@ -180,6 +180,36 @@ main .container{
 	color: var(--color-pink);
 }
 
+/* --- MAP --- */
+
+#map{
+	position: relative;
+}
+
+#map .map-point{
+	background-color: black;
+	color: white;
+
+	min-width: 3rem;
+	min-height: 3rem;
+	padding: 0 1rem;
+
+	position: absolute;
+	z-index: 1;
+
+	cursor: pointer;
+    outline: none;
+	border-radius: 2rem;
+	border: 3px solid rgb(255, 255, 255);
+	transform: translate(-50%);
+}
+
+#map .info-point{
+	display: none;
+}
+
+/* --- ANIMATIONS --- */
+
 @keyframes deco-bottom-anim{
 	from{background: url(img/deco-bottom-1.png) bottom no-repeat;background-size: contain;}
 	to{background: url(img/deco-bottom-2.png) bottom no-repeat;background-size: contain;}
@@ -192,5 +222,4 @@ main .container{
 	width: 100%;
 }
 
-/* --- ANIMATIONS --- */
 

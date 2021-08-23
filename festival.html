@@ -23,13 +23,13 @@
 				    <div class="collapse navbar-collapse" id="navbarNavDropdown">
 				      	<ul class="navbar-nav ms-auto">
 					        <li class="nav-item active">
-					          <a class="nav-link" href="festival.html">Le festival</a>
+					          <a class="nav-link" href="#">Le festival</a>
 					        </li>
 					        <li class="nav-item">
 					          <a class="nav-link" href="program.html">Programme</a>
 					        </li>
 					        <li class="nav-item">
-					          <a class="nav-link" href="#">Billeterie</a>
+					          <a class="nav-link" href="ticket.html">Billeterie</a>
 					        </li>
 					        <li class="nav-item dropdown">
 					          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -68,6 +68,16 @@
 						<p class="mb-5">Depuis 2012, une édition hivernale du festival est organisée au mois de janvier.</p>
 
 						<h2>Infos pratiques</h2>
+
+						<h3>Les lieux</h3>
+
+						<div id="map" class="mb-4">
+							<img class="img-fluid" src="img/map.jpg" alt="map du festival">
+							<a href="https://www.google.com/maps/place/25+Rue+de+Pontaniou,+29200+Brest/" target="_blank"><button class="map-point" style="top:68%; left:55%"><div class="info-point">ATELIER DES CAPUCINS</div></button></a>
+							<a href="https://www.google.com/maps/place/30+Rue+Jean+Marie+le+Bris,+29200+Brest/" target="_blank"><button class="map-point" style="top:73%; left:65%"><div class="info-point">LA CARENE</div></button></a>
+							<a href="https://www.google.com/maps/place/Guilers/" target="_blank"><button class="map-point" style="top:42%; left:31%"><div class="info-point">FORT DE PENFELD</div></button></a>
+							<a href="https://www.google.com/maps/place/41+Rue+Charles+Berthelot,+29200+Brest/" target="_blank"><button class="map-point" style="top:52%; left:66%"><div class="info-point">PASSERELLE</div></button></a>
+						</div>
 						
 						<h3>Venir en train</h3>
 						<p>Le TGV dessert quotidiennement Brest depuis les grandes villes de France (Bordeaux, Paris, Lille, Lyon etc.)</p>
@@ -102,7 +112,20 @@
 			</footer>
 
 		</main>
-
+		<script>
+			var mapPoint = document.getElementsByClassName("map-point");
+			var infoPoint = document.getElementsByClassName("info-point");
+			for(let i = 0; i < mapPoint.length; i++){
+				mapPoint[i].addEventListener("mouseover", function(e){
+					infoPoint[i].style.display = "block";
+					mapPoint[i].style.zIndex = "100";
+				})
+				mapPoint[i].addEventListener("mouseout",function(e){
+					infoPoint[i].style.display = "none";
+					mapPoint[i].style.zIndex = "1";
+				})
+			}
+		</script>
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 
