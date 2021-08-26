@@ -180,6 +180,16 @@ main .container{
 	color: var(--color-pink);
 }
 
+/* --- PROGRAM --- */
+
+#program{
+
+}
+@media (max-width: 768px){
+	#program{
+		text-align:center;
+	}
+}
 /* --- MAP --- */
 
 #map{
