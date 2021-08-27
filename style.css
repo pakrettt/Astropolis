@@ -48,17 +48,6 @@ h3{
 	font-weight: 300;
 }
 
-ul {
-	list-style: none; 
-  }
-  
-  ul li::before {
-	content: "\25A0";
-	color: black;
-	font-size: larger;
-	padding: .5rem;
-  }
-
 .form-control{
 	border: none;
 	border-radius: 0px;
@@ -104,7 +93,7 @@ header nav{
 .navbar-header a, .navbar-header a:visited, .navbar-header a:active{
 	font-family: var(--font-title);
 	text-transform: uppercase;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	color: var(--color-light);
 }
 
@@ -132,6 +121,17 @@ main{
 main .container{
 	max-width: 750px;
 	margin: auto;
+}
+
+main ul {
+	list-style: none; 
+}
+  
+main ul li::before {
+	content: "\25A0";
+	color: black;
+	font-size: larger;
+	padding: .5rem;
 }
 
 .btn-big{
@@ -199,9 +199,25 @@ main .container{
 
 /* --- PROGRAM --- */
 
-#program{
-
+#program .artist{
+	font-family: var(--font-title);
+	font-size: 1.4rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
+
+#program .line-100{
+	background-color: white;
+	height: .5rem;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+#program img{
+	background-color: rgba(255, 255, 255, 0.25);
+}
+
 @media (max-width: 768px){
 	#program{
 		text-align:center;
