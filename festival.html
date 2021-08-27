@@ -5,14 +5,25 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
+		<!--L'indexation du site est bloqué pour le pas nuire au référencement du vrai festival-->
+		<meta name="robots" content="noindex">
+		<meta name="googlebot" content="noindex">
+
+		<!--meta description-->
+		<meta name="description" content="Astropolis, la cité des étoiles, première rave officielle d'Europe.">
+
+		<!--style sheets-->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="style.css">
 
-		<title>Astropolis</title>
+		<title>Astropolis - le festival</title>
 
 	</head>
 	<body>	
+		<!--animated light background-->
 		<div id=background style="height: 100vh; z-index: -1;"></div>
+
+		<!--navbar top-->
 		<header>
 			<nav class="navbar navbar-header fixed-top navbar-expand-md">
 			    <div class="container">
@@ -46,6 +57,7 @@
 			</nav>
 		</header>
 		
+		<!--main content-->
 		<main id="festival">
 			<section>
 				<div class="container text-center" >
@@ -92,6 +104,7 @@
 				</div>
 			</section>
 
+			<!--footer-->
 			<footer>
 				<div id="nav-footer">
 					<ul class="navbar-nav navbar-footer d-flex flex-md-row justify-content-center h-100 m-auto">
@@ -112,6 +125,8 @@
 			</footer>
 
 		</main>
+
+		<!--interactive map script-->
 		<script>
 			var mapPoint = document.getElementsByClassName("map-point");
 			var infoPoint = document.getElementsByClassName("info-point");
@@ -126,8 +141,12 @@
 				})
 			}
 		</script>
+
+		<!--bootstrap script-->
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 
+		<!--newsletter script-->
+		<script src="js/suscribe.js"></script>
 	</body>
 </html>
