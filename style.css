@@ -198,6 +198,18 @@ main ul li::before {
 	color: var(--color-pink);
 }
 
+/* --- SOCIAL --- */
+
+.social{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.social img:hover{
+	transform: translateY(-10px);
+}
+
 /* --- PROGRAM --- */
 
 #program .artist-name{
